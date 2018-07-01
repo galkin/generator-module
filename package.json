@@ -1,0 +1,49 @@
+{
+  "name": "@galkin/generator-package",
+  "version": "0.1.0",
+  "description": "Generator for node packages",
+  "keywords": [
+    "node-package",
+    "yeoman-generator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galkin/generator-package.git"
+  },
+  "license": "ISC",
+  "author": "Nikita Galkin",
+  "files": [
+    "generators"
+  ],
+  "main": "generators/app/index.js",
+  "scripts": {
+    "lint": "eslint generators/* __tests__/*",
+    "lint-fix": "eslint generators/* __tests__/* --fix",
+    "test": "npm run lint && jest"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "generators"
+    ]
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^2.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "jest": "^23.2.0",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^1.8.0"
+  },
+  "engines": {
+    "node": "^8.11.3"
+  }
+}
